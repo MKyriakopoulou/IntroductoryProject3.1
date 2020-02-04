@@ -26,6 +26,5 @@ namespace IntroductoryProject3._1
         }
     
         public virtual DbSet<Lawyer> Lawyers { get; set; }
-        public virtual DbSet<OldLawyer> OldLawyers { get; set; }
     }
 }

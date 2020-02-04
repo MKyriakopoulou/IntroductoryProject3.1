@@ -6,7 +6,6 @@
     <edmx:Diagrams>
       <Diagram DiagramId="dfcf99ba4a604c8b8f4004577d2d0d6d" Name="Diagram1" >
         <EntityTypeShape EntityType="LawyerDbModel.Lawyer" Width="1.5" PointX="4.875" PointY="1.5" />
-        <EntityTypeShape EntityType="LawyerDbModel.OldLawyer" Width="1.5" PointX="8.75" PointY="1.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

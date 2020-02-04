@@ -191,10 +191,6 @@
       <DependentUpon>LawyerDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\LawyerViewModel.cs" />
-    <Compile Include="Models\OldLawyerViewModel.cs" />
-    <Compile Include="OldLawyer.cs">
-      <DependentUpon>LawyerDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

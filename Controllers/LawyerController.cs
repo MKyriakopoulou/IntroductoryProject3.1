@@ -193,7 +193,7 @@ namespace IntroductoryProject3._1.Controllers
 
         public IHttpActionResult Put(LawyerViewModel lawyer)
         {
-            OldLawyerViewModel oldLawyer = new OldLawyerViewModel();
+           
 
             if (!ModelState.IsValid)
                 return BadRequest("Not a valid model");
@@ -208,14 +208,8 @@ namespace IntroductoryProject3._1.Controllers
                 {
                     
 
-                    oldLawyer.Name = lawyer.Name;
-                    oldLawyer.Surname = lawyer.Surname;
-                    oldLawyer.Initials = lawyer.Initials;
-                    oldLawyer.DateOfBirth = lawyer.DateOfBirth;
-                    oldLawyer.Email = lawyer.Email;
-                    oldLawyer.Gender = lawyer.Gender;
-                    oldLawyer.Title = lawyer.Title;
-                    oldLawyer.LawyerId = lawyer.Id;
+                  
+
                     existingLawyer.Name = lawyer.Name;
                     existingLawyer.Surname = lawyer.Surname;
                     existingLawyer.Initials = lawyer.Initials;
