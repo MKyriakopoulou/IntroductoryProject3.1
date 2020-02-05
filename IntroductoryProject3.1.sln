@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCViewIP3.1", "..\MVCViewIP3.1\MVCViewIP3.1.csproj", "{95B46316-5334-4725-AC90-C8CAE298C39C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCViewIP3.1", "..\IntroductoryProject3.1Test\MVCViewIP3.1\MVCViewIP3.1.csproj", "{95B46316-5334-4725-AC90-C8CAE298C39C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
