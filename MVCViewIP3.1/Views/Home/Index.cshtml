@@ -1,4 +1,5 @@
-﻿@model IEnumerable<MVCViewIP3._1.Models.Lawyer>
+﻿
+@model IEnumerable<MVCViewIP3._1.Models.LawyerViewModel>
 
 @{
     ViewBag.Title = "Index";
@@ -33,10 +34,10 @@
             @Html.DisplayNameFor(model => model.Email)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Gender)
+            @Html.DisplayNameFor(model => model.gender_id)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Title)
+            @Html.DisplayNameFor(model => model.title_id)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.DateOfBirth)
@@ -46,6 +47,7 @@
 
     @foreach (var item in Model)
     {
+
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
@@ -60,10 +62,10 @@
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Gender)
+                @Html.DisplayFor(modelItem => item.gender_id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Title)
+                @Html.DisplayFor(modelItem => item.title_id)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DateOfBirth)

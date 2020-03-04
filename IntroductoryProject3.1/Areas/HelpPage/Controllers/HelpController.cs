@@ -1,8 +1,8 @@
+using IntroductoryProject3._1.Areas.HelpPage.ModelDescriptions;
+using IntroductoryProject3._1.Areas.HelpPage.Models;
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using IntroductoryProject3._1.Areas.HelpPage.ModelDescriptions;
-using IntroductoryProject3._1.Areas.HelpPage.Models;
 
 namespace IntroductoryProject3._1.Areas.HelpPage.Controllers
 {

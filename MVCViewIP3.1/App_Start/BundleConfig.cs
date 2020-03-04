@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace MVCViewIP3._1
 {
@@ -28,6 +27,14 @@ namespace MVCViewIP3._1
 
             bundles.Add(new ScriptBundle("~/bundles/popper").Include(
                   "~/Scripts/umd/popper.js"));
+
+            //Create bundel for jQueryUI  
+            //js  
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
+                      "~/Scripts/jquery-ui-{version}.js"));
+            //css  
+            bundles.Add(new StyleBundle("~/Content/cssjqryUi").Include(
+                   "~/Content/jquery-ui.css"));
         }
     }
 }

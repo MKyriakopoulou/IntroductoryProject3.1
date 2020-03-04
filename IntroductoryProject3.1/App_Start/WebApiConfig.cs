@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web.Http;
 
 namespace IntroductoryProject3._1
@@ -9,6 +7,7 @@ namespace IntroductoryProject3._1
     {
         public static void Register(HttpConfiguration config)
         {
+
             // Web API configuration and services
 
             // Web API routes
@@ -19,6 +18,12 @@ namespace IntroductoryProject3._1
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+        }
+
+        public static void Register(object configuration)
+        {
+            throw new NotImplementedException();
         }
     }
 }
