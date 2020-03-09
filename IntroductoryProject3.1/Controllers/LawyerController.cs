@@ -1,20 +1,52 @@
 ﻿using DTOlibrary;
 using IntroductoryProject3._1.DAL;
 using IntroductoryProject3._1.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Web.Http.Results;
 using System.Web.Mvc;
 
 namespace IntroductoryProject3._1.Controllers
 {
     public class LawyerController : ApiController
     {
+        LawyerContext context = new LawyerContext();
+        ILawyerRepository rep;
         public LawyerController()
         {
+
+        }
+        public LawyerController(LawyerContext _context)
+        {
+            context = _context;
         }
 
+        List<Lawyer> lawyers = new List<Lawyer>();
+        private Lawyer lawyer;
+
+        public LawyerController(List<Lawyer> lawyers)
+        {
+            this.lawyers = lawyers;
+        }
+
+        public LawyerController(List<LawyerDTO> lawyersdto)
+        {
+            this.lawyers = lawyers;
+        }
+
+        public LawyerController(Lawyer lawyer)
+        {
+            this.lawyer = lawyer;
+        }
+        public LawyerController(ILawyerRepository _rep)
+        {
+            rep = _rep;
+        }
 
 
         //Get action methods of the previous section
@@ -41,6 +73,11 @@ namespace IntroductoryProject3._1.Controllers
                 ctx.SaveChanges();
             }
             return Ok();
+        }
+
+        public object PostNewLawyer(object testLawyer)
+        {
+            throw new NotImplementedException();
         }
 
         [System.Web.Http.Route("api/Lawyer/GetAllLawyers")]
@@ -71,7 +108,8 @@ namespace IntroductoryProject3._1.Controllers
 
         }
 
-        public IHttpActionResult GetAllLawyers(int lid)
+        [System.Web.Http.Route("api/Lawyer/GetAllLawyersByID")]
+        public IHttpActionResult GetAllLawyersByID(int lid)
         {
             LawyerDTO lawyer = null;
 
@@ -99,6 +137,8 @@ namespace IntroductoryProject3._1.Controllers
 
             return Ok(lawyer);
         }
+
+
 
         public IHttpActionResult GetAllLawyers(string name, string surname)
         {
@@ -248,37 +288,7 @@ namespace IntroductoryProject3._1.Controllers
             return Ok();
         }
 
-        [System.Web.Http.Route("api/Lawyer/GetGenders")]
-        // GET: api/Genders
-        public List<GenderDTO> GetGenders()
-        {
 
-            using (var ctx = new LawyerContext())
-            {
-                return (from l in ctx.Genders
-                        select new GenderDTO
-                        {
-                            gender_id = l.gender_id,
-                            Description = l.description
-                        }).ToList();
-            }
-        }
-
-        [System.Web.Http.Route("api/Lawyer/GetTitles")]
-        // GET: api/Titles
-        public List<TitleDTO> GetTitles()
-        {
-
-            using (var ctx = new LawyerContext())
-            {
-                return (from l in ctx.Titles
-                        select new TitleDTO
-                        {
-                            title_id = l.title_id,
-                            description = l.description
-                        }).ToList();
-            }
-        }
     }
 
 

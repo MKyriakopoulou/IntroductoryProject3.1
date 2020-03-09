@@ -28,7 +28,6 @@ namespace IntroductoryProject3._1.Models
         public string Email { get; set; }
 
 
-
     }
 
 }

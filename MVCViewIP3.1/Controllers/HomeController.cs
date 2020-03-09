@@ -217,7 +217,7 @@ namespace MVCViewIP3._1.Controllers
             {
                 client.BaseAddress = new Uri("https://localhost:44372/api/");
                 //HTTP GET
-                var responseTask = client.GetAsync("lawyer?lid=" + id.ToString());
+                var responseTask = client.GetAsync("Lawyer/GetAllLawyersByID?lid=" + id.ToString());
                 responseTask.Wait();
 
                 var result = responseTask.Result;
@@ -242,7 +242,7 @@ namespace MVCViewIP3._1.Controllers
             {
                 client.BaseAddress = new Uri("https://localhost:44372/api/");
                 //HTTP GET
-                var responseTask = client.GetAsync("lawyer?lid=" + id.ToString());
+                var responseTask = client.GetAsync("Lawyer/GetAllLawyersByID?lid=" + id.ToString());
                 responseTask.Wait();
 
                 var result = responseTask.Result;
@@ -263,7 +263,7 @@ namespace MVCViewIP3._1.Controllers
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:44372/api/lawyer");
+                client.BaseAddress = new Uri("https://localhost:44372/api/Lawyer");
 
                 //HTTP POST
                 var putTask = client.PutAsJsonAsync<LawyerViewModel>("lawyer", lawyer);
@@ -286,7 +286,7 @@ namespace MVCViewIP3._1.Controllers
                 client.BaseAddress = new Uri("https://localhost:44372/api/");
 
                 //HTTP DELETE
-                var deleteTask = client.DeleteAsync("lawyer?lid=" + id.ToString());
+                var deleteTask = client.DeleteAsync("Lawyer/GetAllLawyersByID?lid=" + id.ToString());
                 deleteTask.Wait();
 
                 var result = deleteTask.Result;
